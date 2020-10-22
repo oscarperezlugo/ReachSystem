@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ReachSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarrago Reach System</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/columnas.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <form runat="server">
+       <nav class="nave fijador">
+            <div  class="col2L  col0M col0S col0T" >
+                  <a href="Default.aspx"><img id="logo" src="https://www.tarrago.com/wp-content/uploads/2019/07/logo-tarrago-web.png" /></a>
+            </div>            
+        </nav>
+        <nav class="subnave fijadordos">
+            <label class="fa fa-bars botonsub" for="check"/>                                          
+        </nav> 
+        <div id="cajacontenedor" class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div> 
+        <input type="checkbox" class="checkbox" id="check"/>
+        <label class="panelbloqueadorizq" for="check"></label>
+        <div id="block1" class="menulateral" >
+            <div class="desplegable">
+                
+                <h3 class="titulomenu">USUARIOS</h3>
+                <ul>
+                    <li><a href="ListaUsuarios.aspx">LISTA</a></li>
+                    <li><a href="CreacionUsuario.aspx">CREACION</a></li>  
+                    <li><a href="ListaUsuariosPen.aspx">PENDIENTES</a></li>
+                </ul>
+            </div>
+            <div class="desplegable">
+                <h3 class="titulomenu">PRODUCTOS</h3>
+                <ul>
+                    <li><a href="Default.aspx">LISTA</a></li>
+                    <li><a href="CreacionProductoUno.aspx">CREACION</a></li>
+                    <li><a href="#">ACTUALIZACION</a></li>
+                </ul>
+            </div>
+            
+        </div>
+            
+
+    </form>
+</body>
+</html>

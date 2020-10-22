@@ -1,0 +1,48 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contrasena.aspx.cs" Inherits="ReachSystem.Contrasena" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="Oscar Perez Lugo" content="Developer"/>
+        <meta name="description"  content="Tarrago Brands"/>
+        <meta name="keywords"  content="QUIMICOS"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
+        <title>Tarrago Reach System</title>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="Content/columnas.css" rel="stylesheet" />
+        <link href="Content/Site.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <nav class="nave fila col10L">
+            <div class="col2L">
+                <img id="logo" src="https://www.tarrago.com/wp-content/uploads/2019/07/logo-tarrago-web.png"/>
+            </div>                       
+        </nav>
+        <div class="subnave"/>
+        <div class="baseform">
+            <br />
+            <br />
+            <br />
+            <br />
+            <p><h2>Recuperar contraseña</h2></p>            
+            <div class="fila col10L">
+                <input class="formulario" placeholder="Correo" type="email" required/>            
+            </div>                        
+            <div class="fila col10L">
+                <input class="formulario" placeholder="Nueva Contraseña" type="password" required/>            
+            </div>
+            <div class="fila col10L">
+                <input class="formulario" placeholder="Repetir Contraseña" type="password" required/>            
+            </div>            
+            <p><a class="enlaces" href="Login.aspx">Volver al inicio de Sesión</a></p>
+            <div class="fila col10L">
+                <asp:Button runat="server" class="botonsubmit" value="CAMBIAR CONTRASEÑA" text="CAMBIAR CONTRASEÑA" type="submit" OnClick="Unnamed1_Click1" />            
+            </div>
+        </div>        
+    </form>
+</body>
+</html>
