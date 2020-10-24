@@ -39,7 +39,7 @@ namespace ReachSystem
                         querySaveStaff.Parameters.Add("@IdiomaOrig", SqlDbType.VarChar).Value = DropDownList3.SelectedValue.ToString();
                         querySaveStaff.Parameters.Add("@EmpresaOrig", SqlDbType.VarChar).Value = Text1.Value.ToString();
                         querySaveStaff.Parameters.Add("@Pass", SqlDbType.VarChar).Value = Contraseña.Value.ToString();
-                        querySaveStaff.Parameters.Add("@Status", SqlDbType.VarChar).Value = "PENDIENTE";
+                        querySaveStaff.Parameters.Add("@Status", SqlDbType.VarChar).Value = "APROBADO";
                         try
                         {
                             openCon.Open();

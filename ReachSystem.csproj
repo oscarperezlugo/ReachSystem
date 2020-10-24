@@ -116,6 +116,7 @@
     <Content Include="CreacionProductoDos.aspx" />
     <Content Include="CreacionProductoUno.aspx" />
     <Content Include="CreacionUsuario.aspx" />
+    <Content Include="DescargaDos.aspx" />
     <Content Include="ListaUsuariosPen.aspx" />
     <Content Include="ListaUsuarios.aspx" />
     <Content Include="Default.aspx" />
@@ -132,6 +133,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Contrasena.aspx" />
+    <Content Include="Descarga.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -206,6 +208,13 @@
       <DependentUpon>CreacionUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Datos\Datos.cs" />
+    <Compile Include="DescargaDos.aspx.cs">
+      <DependentUpon>DescargaDos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DescargaDos.aspx.designer.cs">
+      <DependentUpon>DescargaDos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListaUsuariosPen.aspx.cs">
       <DependentUpon>ListaUsuariosPen.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,6 +245,13 @@
     </Compile>
     <Compile Include="Contrasena.aspx.designer.cs">
       <DependentUpon>Contrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Descarga.aspx.cs">
+      <DependentUpon>Descarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Descarga.aspx.designer.cs">
+      <DependentUpon>Descarga.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>

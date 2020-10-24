@@ -16,7 +16,21 @@ namespace ReachSystem
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int i = GridView1.SelectedIndex;
+            string nombre = GridView1.Rows[i].Cells[1].Text;
+            string clase = GridView1.Rows[i].Cells[2].Text;
 
+            HttpCookie nombreS = new HttpCookie("nombreProdC");
+            nombreS.Value = nombre;
+            nombreS.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(nombreS);
+
+            HttpCookie claseS = new HttpCookie("clasProdC");
+            claseS.Value = clase;
+            claseS.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(claseS);
+
+            Response.Redirect("CreacionProductoDos.aspx");
         }
     }
 }

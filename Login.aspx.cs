@@ -56,7 +56,14 @@ namespace ReachSystem
                         Response.Cookies.Add(perfilS);
 
                         Response.Write("<script>alert('BIENVENIDO')</script>");
-                        Response.Redirect("Default.aspx");
+                        if (Perfil == "ADMIN")
+                        {
+                            Response.Redirect("Default.aspx");
+                        }
+                        else
+                        {
+                            Response.Redirect("Descarga.aspx");
+                        }                        
 
                     }
                     else
