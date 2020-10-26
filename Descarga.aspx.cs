@@ -15,7 +15,15 @@ namespace ReachSystem
         string CLASE = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            clientefactura.Text = Request.Cookies["nombreC"].Value;
+            if (Request.Cookies["nombreC"] != null)
+            {
+                clientefactura.Text = Request.Cookies["nombreC"].Value;
+            }
+            else
+            {
+                clientefactura.Text = "INVITADO"; 
+            }
+            
             
         }
 
