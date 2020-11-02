@@ -16,6 +16,7 @@ namespace ReachSystem
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
             string nombre = Nombre.Value.ToString();
+            string codigo = Text1.Value.ToString();
             string clase = DropDownList4.SelectedValue.ToString();  
             
             HttpCookie nombreS = new HttpCookie("nombreProdC");
@@ -27,6 +28,11 @@ namespace ReachSystem
             claseS.Value = clase;
             claseS.Expires = DateTime.Now.AddDays(30);
             Response.Cookies.Add(claseS);
+
+            HttpCookie codigoS = new HttpCookie("codProdC");
+            codigoS.Value = codigo;
+            codigoS.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(codigoS);
 
             Response.Redirect("CreacionProductoDos.aspx");
         }

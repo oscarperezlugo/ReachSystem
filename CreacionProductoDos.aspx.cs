@@ -15,11 +15,164 @@ namespace ReachSystem
     public partial class CreacionProductoDos : System.Web.UI.Page
     {
         string NOMBRE;
-        string CLASE;        
+        string CLASE;
+        string CODIGO;
         protected void Page_Load(object sender, EventArgs e)
         {
             NOMBRE = Request.Cookies["nombreProdC"].Value;
             CLASE = Request.Cookies["clasProdC"].Value;
+            CODIGO = Request.Cookies["codProdC"].Value;
+            if (CLASE == "GLP")
+            {
+                FileUpload2.Attributes.Add("style", "display:none");
+                Label2.Attributes.Add("style", "display:none");
+
+                FileUpload1.Attributes.Add("style", "display:none");
+                Label1.Attributes.Add("style", "display:none");
+
+                FileUpload3.Attributes.Add("style", "display:none");
+                Label3.Attributes.Add("style", "display:none");
+
+                FileUpload7.Attributes.Add("style", "display:none");
+                Label7.Attributes.Add("style", "display:none");
+
+                FileUpload8.Attributes.Add("style", "display:none");
+                Label8.Attributes.Add("style", "display:none");
+
+                FileUpload9.Attributes.Add("style", "display:none");
+                Label9.Attributes.Add("style", "display:none");
+
+                FileUpload10.Attributes.Add("style", "display:none");
+                Label10.Attributes.Add("style", "display:none");
+
+                FileUpload11.Attributes.Add("style", "display:none");
+                Label11.Attributes.Add("style", "display:none");
+
+                FileUpload12.Attributes.Add("style", "display:none");
+                Label12.Attributes.Add("style", "display:none");
+
+                FileUpload13.Attributes.Add("style", "display:none");
+                Label13.Attributes.Add("style", "display:none");
+
+                FileUpload14.Attributes.Add("style", "display:none");
+                Label14.Attributes.Add("style", "display:none");
+
+                FileUpload15.Attributes.Add("style", "display:none");
+                Label15.Attributes.Add("style", "display:none");
+
+                FileUpload16.Attributes.Add("style", "display:none");
+                Label16.Attributes.Add("style", "display:none");
+
+                FileUpload17.Attributes.Add("style", "display:none");
+                Label17.Attributes.Add("style", "display:none");
+
+                FileUpload18.Attributes.Add("style", "display:none");
+                Label18.Attributes.Add("style", "display:none");
+
+                FileUpload19.Attributes.Add("style", "display:none");
+                Label19.Attributes.Add("style", "display:none");
+
+                FileUpload20.Attributes.Add("style", "display:none");
+                Label20.Attributes.Add("style", "display:none");
+
+                FileUpload21.Attributes.Add("style", "display:none");
+                Label21.Attributes.Add("style", "display:none");
+
+                FileUpload22.Attributes.Add("style", "display:none");
+                Label22.Attributes.Add("style", "display:none");
+
+                FileUpload23.Attributes.Add("style", "display:none");
+                Label23.Attributes.Add("style", "display:none");
+
+                FileUpload24.Attributes.Add("style", "display:none");
+                Label24.Attributes.Add("style", "display:none");
+
+                FileUpload25.Attributes.Add("style", "display:none");
+                Label25.Attributes.Add("style", "display:none");
+
+                FileUpload26.Attributes.Add("style", "display:none");
+                Label26.Attributes.Add("style", "display:none");
+
+                FileUpload27.Attributes.Add("style", "display:none");
+                Label27.Attributes.Add("style", "display:none");
+
+                FileUpload6.Attributes.Add("style", "display:none");
+                Label6.Attributes.Add("style", "display:none");
+            }
+            else if ( CLASE == "CCR")
+            {
+                FileUpload2.Attributes.Add("style", "display:none");
+                Label2.Attributes.Add("style", "display:none");
+
+                FileUpload1.Attributes.Add("style", "display:none");
+                Label1.Attributes.Add("style", "display:none");
+
+                FileUpload3.Attributes.Add("style", "display:none");
+                Label3.Attributes.Add("style", "display:none");
+
+                FileUpload7.Attributes.Add("style", "display:none");
+                Label7.Attributes.Add("style", "display:none");
+
+                FileUpload8.Attributes.Add("style", "display:none");
+                Label8.Attributes.Add("style", "display:none");
+
+                FileUpload9.Attributes.Add("style", "display:none");
+                Label9.Attributes.Add("style", "display:none");
+
+                FileUpload10.Attributes.Add("style", "display:none");
+                Label10.Attributes.Add("style", "display:none");
+
+                FileUpload11.Attributes.Add("style", "display:none");
+                Label11.Attributes.Add("style", "display:none");
+
+                FileUpload12.Attributes.Add("style", "display:none");
+                Label12.Attributes.Add("style", "display:none");
+
+                FileUpload13.Attributes.Add("style", "display:none");
+                Label13.Attributes.Add("style", "display:none");
+
+                FileUpload14.Attributes.Add("style", "display:none");
+                Label14.Attributes.Add("style", "display:none");
+
+                FileUpload15.Attributes.Add("style", "display:none");
+                Label15.Attributes.Add("style", "display:none");
+
+                FileUpload16.Attributes.Add("style", "display:none");
+                Label16.Attributes.Add("style", "display:none");
+
+                FileUpload17.Attributes.Add("style", "display:none");
+                Label17.Attributes.Add("style", "display:none");
+
+                FileUpload18.Attributes.Add("style", "display:none");
+                Label18.Attributes.Add("style", "display:none");
+
+                FileUpload19.Attributes.Add("style", "display:none");
+                Label19.Attributes.Add("style", "display:none");
+
+                FileUpload20.Attributes.Add("style", "display:none");
+                Label20.Attributes.Add("style", "display:none");
+
+                FileUpload21.Attributes.Add("style", "display:none");
+                Label21.Attributes.Add("style", "display:none");
+
+                FileUpload22.Attributes.Add("style", "display:none");
+                Label22.Attributes.Add("style", "display:none");
+
+                FileUpload23.Attributes.Add("style", "display:none");
+                Label23.Attributes.Add("style", "display:none");
+
+                FileUpload24.Attributes.Add("style", "display:none");
+                Label24.Attributes.Add("style", "display:none");
+
+                FileUpload25.Attributes.Add("style", "display:none");
+                Label25.Attributes.Add("style", "display:none");
+
+                FileUpload26.Attributes.Add("style", "display:none");
+                Label26.Attributes.Add("style", "display:none");
+
+                FileUpload27.Attributes.Add("style", "display:none");
+                Label27.Attributes.Add("style", "display:none");
+            }
         }
         private ObservableCollection<Lineas> _linea;
         public ObservableCollection<Lineas> Lineas
@@ -471,12 +624,13 @@ namespace ReachSystem
             {
                 using (SqlConnection openCon = new SqlConnection("workstation id=tarragoReach.mssql.somee.com;packet size=4096;user id=tarrago_SQLLogin_1;pwd=n84vsf5e47;data source=tarragoReach.mssql.somee.com;persist security info=False;initial catalog=tarragoReach"))
                 {
-                    string saveStaff = "INSERT into Productos (Nombre, Clase, Idioma, Archivo) VALUES (@Nombre, @Clase, @Idioma, @Archivo)";
+                    string saveStaff = "INSERT into Productos (Nombre, Clase, Idioma, Archivo, Codigo) VALUES (@Nombre, @Clase, @Idioma, @Archivo, @Codigo)";
 
                     using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                     {
                         querySaveStaff.Connection = openCon;
                         querySaveStaff.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = NOMBRE;
+                        querySaveStaff.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = CODIGO;
                         querySaveStaff.Parameters.Add("@Clase", SqlDbType.VarChar).Value = CLASE;
                         querySaveStaff.Parameters.Add("@Idioma", SqlDbType.VarChar).Value = Lineas[i].Idioma;
                         querySaveStaff.Parameters.Add("@Archivo", SqlDbType.VarChar).Value = Lineas[i].Archivo;

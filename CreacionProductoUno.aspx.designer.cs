@@ -24,6 +24,15 @@ namespace ReachSystem
         protected global::System.Web.UI.HtmlControls.HtmlInputText Nombre;
 
         /// <summary>
+        /// Control Text1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+
+        /// <summary>
         /// Control DropDownList4.
         /// </summary>
         /// <remarks>

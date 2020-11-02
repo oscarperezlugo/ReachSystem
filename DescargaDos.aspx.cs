@@ -14,24 +14,29 @@ namespace ReachSystem
     {
         string CLASE;
         string IDIOMA;
+        string NOMBRE;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             IDIOMA = Request.Cookies["paramunoC"].Value;
             CLASE = Request.Cookies["paramdosC"].Value;
+            NOMBRE = Request.Cookies["paramtresC"].Value;
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int i = GridView1.SelectedIndex;
             using (SqlConnection openCon = new SqlConnection("workstation id=tarragoReach.mssql.somee.com;packet size=4096;user id=tarrago_SQLLogin_1;pwd=n84vsf5e47;data source=tarragoReach.mssql.somee.com;persist security info=False;initial catalog=tarragoReach"))
             {
-                string saveStaff = "SELECT Archivo FROM Productos WHERE Idioma=@Idioma AND Clase=@Clase";
+                string saveStaff = "SELECT Archivo FROM Productos WHERE Idioma=@Idioma AND Clase=@Clase AND Nombre=@Nombre";
 
                 using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                 {
                     querySaveStaff.Connection = openCon;
                     querySaveStaff.Parameters.Add("@Idioma", SqlDbType.VarChar).Value = IDIOMA;
                     querySaveStaff.Parameters.Add("@Clase", SqlDbType.VarChar).Value = CLASE;
-                    
+                    querySaveStaff.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = GridView1.Rows[i].Cells[0].Text;
+
                     try
                     {
                         openCon.Open();

@@ -3,7 +3,10 @@
     <div class="baseform">
         <p><h2>Crear Usuario</h2></p>
             <div class="fila col10L">
-                <input class="formulario" placeholder="Nombre (Juan Perez)" id="Nombre" type="text"  runat="server"/>            
+                <input class="formulario" placeholder="Nombre (Juan)" id="Nombre" type="text"  runat="server"/>            
+            </div>
+        <div class="fila col10L">
+                <input class="formulario" placeholder="Apellido (Perez)" id="Text2" type="text"  runat="server"/>            
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Empresa (Tarrago Brands)" id="Apellido" type="text"  runat="server"/>            
@@ -11,12 +14,12 @@
             <div class="fila col10L">
                 <input class="formulario" placeholder="Email (juan@gmail.com)" id="Correo" type="email"  runat="server"/>            
             </div>
-            <div class="fila col10L">
+            <%--<div class="fila col10L">
                 <input class="formulario" placeholder="Télefono (555 555555)" id="Telefono" type="text" maxlength="11"  runat="server"/>            
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Dirección (Valencia, Calle Libra #55)" id="Dirección" type="text"  runat="server"/>            
-            </div>
+            </div>--%>
             <div class="fila col10L">
                 <asp:DropDownList ID="DropDownList4" runat="server" CssClass="formulario" >
                     <asp:ListItem>PERFIL</asp:ListItem>
@@ -24,7 +27,7 @@
                     <asp:ListItem>ADMIN</asp:ListItem>                    
                 </asp:DropDownList>                
             </div>
-            <div class="fila col10L">
+           <%-- <div class="fila col10L">
                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="formulario" >
                     <asp:ListItem>IDIOMA</asp:ListItem>
                     <asp:ListItem>Bulgarian</asp:ListItem>
@@ -55,7 +58,7 @@
                     <asp:ListItem>Türkçe</asp:ListItem>
                     <asp:ListItem>Čeština</asp:ListItem>
                 </asp:DropDownList>                
-            </div>
+            </div>--%>
             <div class="fila col10L">
                 <asp:DropDownList ID="DropDownList2" runat="server" CssClass="formulario" >
                     <asp:ListItem>PAIS</asp:ListItem>
@@ -88,7 +91,7 @@
                     <asp:ListItem>SUECIA</asp:ListItem>                    
                 </asp:DropDownList>                
             </div>
-            <div class="fila col10L">
+            <%--<div class="fila col10L">
                 <asp:DropDownList ID="DropDownList3" runat="server" CssClass="formulario" >
                     <asp:ListItem>IDIOMA DE ORIGEN</asp:ListItem>
                     <asp:ListItem>Bulgarian</asp:ListItem>
@@ -122,7 +125,7 @@
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Empresa De Origen(Tarrago Brands)" id="Text1" type="text"  runat="server"/>            
-            </div>
+            </div>--%>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Contraseña" id="Contraseña" type="password"  runat="server"/>            
             </div>                                  

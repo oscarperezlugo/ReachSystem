@@ -28,19 +28,19 @@ namespace ReachSystem
                     using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
                     {
                         querySaveStaff.Connection = openCon;
-                        querySaveStaff.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = Nombre.Value.ToString();
+                        querySaveStaff.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = ""+Nombre.Value.ToString()+" "+Text2.Value.ToString()+"";
                         querySaveStaff.Parameters.Add("@Email", SqlDbType.VarChar).Value = Correo.Value.ToString();
                         querySaveStaff.Parameters.Add("@FechaCreacion", SqlDbType.DateTime).Value = DateTime.Now;
                         querySaveStaff.Parameters.Add("@Empresa", SqlDbType.VarChar).Value = Apellido.Value.ToString();
-                        querySaveStaff.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = Telefono.Value.ToString();
-                        querySaveStaff.Parameters.Add("@Direccion", SqlDbType.VarChar).Value = Dirección.Value.ToString();
+                        querySaveStaff.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = "";/*Telefono.Value.ToString();*/
+                        querySaveStaff.Parameters.Add("@Direccion", SqlDbType.VarChar).Value = "";/*Dirección.Value.ToString();*/
                         querySaveStaff.Parameters.Add("@Perfil", SqlDbType.VarChar).Value = "CLIENTE";
-                        querySaveStaff.Parameters.Add("@Idioma", SqlDbType.VarChar).Value = DropDownList1.SelectedValue.ToString();
+                        querySaveStaff.Parameters.Add("@Idioma", SqlDbType.VarChar).Value = "";/*DropDownList1.SelectedValue.ToString();*/
                         querySaveStaff.Parameters.Add("@Pais", SqlDbType.VarChar).Value = DropDownList2.SelectedValue.ToString();
-                        querySaveStaff.Parameters.Add("@IdiomaOrig", SqlDbType.VarChar).Value = DropDownList3.SelectedValue.ToString();
-                        querySaveStaff.Parameters.Add("@EmpresaOrig", SqlDbType.VarChar).Value = Text1.Value.ToString();
+                        querySaveStaff.Parameters.Add("@IdiomaOrig", SqlDbType.VarChar).Value = "";/*DropDownList3.SelectedValue.ToString();*/
+                        querySaveStaff.Parameters.Add("@EmpresaOrig", SqlDbType.VarChar).Value = "";/*Text1.Value.ToString();*/
                         querySaveStaff.Parameters.Add("@Pass", SqlDbType.VarChar).Value = Contraseña.Value.ToString();
-                        querySaveStaff.Parameters.Add("@Status", SqlDbType.VarChar).Value = "PENDIENTE";
+                        querySaveStaff.Parameters.Add("@Status", SqlDbType.VarChar).Value = "APROBADO";
                         try
                         {
                             openCon.Open();

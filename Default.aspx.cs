@@ -11,6 +11,14 @@ namespace ReachSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (GridView1.Rows.Count > 0)
+            {
+                GridView2.Attributes.Add("style", "display:none");
+            }
+            else
+            {
+                GridView1.Attributes.Add("style", "display:none");
+            }
 
         }
 
@@ -19,6 +27,7 @@ namespace ReachSystem
             int i = GridView1.SelectedIndex;
             string nombre = GridView1.Rows[i].Cells[1].Text;
             string clase = GridView1.Rows[i].Cells[2].Text;
+            string codigo = GridView1.Rows[i].Cells[3].Text;
 
             HttpCookie nombreS = new HttpCookie("nombreProdC");
             nombreS.Value = nombre;
@@ -30,7 +39,21 @@ namespace ReachSystem
             claseS.Expires = DateTime.Now.AddDays(30);
             Response.Cookies.Add(claseS);
 
+            HttpCookie codigoS = new HttpCookie("codProdC");
+            codigoS.Value = codigo;
+            codigoS.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(codigoS);
+
             Response.Redirect("CreacionProductoDos.aspx");
+        }
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+            string buscar = Correo.Value;
+            HttpCookie buscarS = new HttpCookie("paramcincoC");
+            buscarS.Value = buscar;
+            buscarS.Expires = DateTime.Now.AddDays(30);
+            Response.Cookies.Add(buscarS);
+            Response.Redirect("Default.aspx");
         }
     }
 }

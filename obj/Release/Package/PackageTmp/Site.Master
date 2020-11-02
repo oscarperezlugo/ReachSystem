@@ -44,7 +44,7 @@
                 <ul>
                     <li><a href="ListaUsuarios.aspx">LISTA</a></li>
                     <li><a href="CreacionUsuario.aspx">CREACION</a></li>  
-                    <li><a href="ListaUsuariosPen.aspx">PENDIENTES</a></li>
+                    <%--<li><a href="ListaUsuariosPen.aspx">PENDIENTES</a></li>--%>
                 </ul>
             </div>
             <div class="desplegable">

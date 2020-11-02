@@ -21,7 +21,7 @@ namespace ReachSystem
             }
             else
             {
-                clientefactura.Text = "INVITADO"; 
+                clientefactura.Text = "GUEST"; 
             }
             
             
@@ -37,11 +37,11 @@ namespace ReachSystem
             {
                 if (pickup.Checked == true)
                 {
-                    CLASE = "SPSP";
+                    CLASE = "GLP";
                 }
                 else
                 {
-                    CLASE = "CCCR";
+                    CLASE = "CCR";
                 }
             }
             if (pagomivil1.Checked == true)
@@ -200,7 +200,47 @@ namespace ReachSystem
                                                                                                                 }
                                                                                                                 else
                                                                                                                 {
-                                                                                                                    IDIOMA = "Čeština";
+                                                                                                                    if (Radio23.Checked == true)
+                                                                                                                    {
+                                                                                                                        IDIOMA = "Čeština";
+                                                                                                                    }
+                                                                                                                    else
+                                                                                                                    {
+                                                                                                                        if (Radio28.Checked == true)
+                                                                                                                        {
+                                                                                                                            IDIOMA = "English";
+                                                                                                                        }
+                                                                                                                        else
+                                                                                                                        {
+                                                                                                                            if (Radio29.Checked == true)
+                                                                                                                            {
+                                                                                                                                IDIOMA = "Español";
+                                                                                                                            }
+                                                                                                                            else
+                                                                                                                            {
+                                                                                                                                if (Radio25.Checked == true)
+                                                                                                                                {
+                                                                                                                                    IDIOMA = "English";
+                                                                                                                                }
+                                                                                                                                else
+                                                                                                                                {
+                                                                                                                                    if (Radio26.Checked == true)
+                                                                                                                                    {
+                                                                                                                                        IDIOMA = "Español";
+                                                                                                                                    }
+                                                                                                                                    else
+                                                                                                                                    {
+                                                                                                                                        IDIOMA = "Français";
+                                                                                                                                    }
+
+                                                                                                                                }
+
+                                                                                                                            }
+
+                                                                                                                        }
+
+                                                                                                                    }
+
                                                                                                                 }
                                                                                                             }
                                                                                                         }
@@ -242,6 +282,11 @@ namespace ReachSystem
                 paramdosS.Value = CLASE;
                 paramdosS.Expires = DateTime.Now.AddDays(30);
                 Response.Cookies.Add(paramdosS);
+
+                HttpCookie paramtresS = new HttpCookie("paramtresC");
+                paramtresS.Value = Correo.Value;
+                paramtresS.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(paramtresS);
                 Response.Redirect("DescargaDos.aspx");
             }
         }

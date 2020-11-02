@@ -27,15 +27,18 @@
             <br />
             <br />
             <br />
-            <center><p><h2>Modulo de Descarga</h2></p></center>
+            <center><p><h2>System's Gallery</h2></p></center>
             <div class="fila col10L">                
-               <center> <p class="nombrecierre"><h4 class="nombrecierre">Estimado(a): <asp:Label class="nombrecierre" runat="server" ID="clientefactura"></asp:Label></h4></p></center>
-               <center> <p><label class="titulocierre">Selecciona tu clase de producto</label></p>                                </center>
+               <center> <p class="nombrecierre"><h4 class="nombrecierre">Dear: <asp:Label class="nombrecierre" runat="server" ID="clientefactura"></asp:Label></h4></p></center>
+                <div class="fila col10L">
+                <center><input class="formulario" placeholder="Product / Code" id="Correo" type="text" required runat="server"/></center>            
+            </div>   
+               <center> <p><label class="titulocierre">Select your product class</label></p></center>
             </div>
-            <center><input type="radio"  class="pickup" name="TipoVenta"  id="check" runat="server"/><label class="opcionescierre" >CLP </label><input type="radio"  class="pickup" name="TipoVenta"  runat="server" id="pickup"/><label class="opcionescierre">SPSP</label><input type="radio"  class="pickup" name="TipoVenta"  runat="server" id="Radio1"/><label class="opcionescierre">CCCR</label>
+            <center><input type="radio"  class="pickup" name="TipoVenta"  id="check" runat="server"/><label class="opcionescierre" >CLP </label><input type="radio"  class="pickupDOS" name="TipoVenta"  runat="server" id="pickup"/><label class="opcionescierre">GLP</label><input type="radio"  class="pickupTRES" name="TipoVenta"  runat="server" id="Radio1"/><label class="opcionescierre">CCR</label>
            
                 <div class="metodo">
-                    <p><label class="titulocierre">Selecciona el Idioma</label></p> 
+                    <p><label class="titulocierre">Select Language</label></p> 
                     
                     <table >
                         <tr>
@@ -85,7 +88,34 @@
                         </tr>
                     </table>                                                                                                                                                                                                                   
                 <br />
-                        <asp:Button class="botonsubmit" value="PAGADO" type="submit" runat="server" CssClass="botonsubmit" Text="SIGUIENTE" OnClick="Unnamed1_Click" />
+                        <asp:Button class="botonsubmit" value="PAGADO" type="submit" runat="server" CssClass="botonsubmit" Text="NEXT" OnClick="Unnamed1_Click" />
+                    
+                </div>
+                <div class="metodoDOS">
+                    <p><label class="titulocierre">Select Language</label></p> 
+                    
+                    <table >                        
+                        <tr>
+                            <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio28" runat="server"/><label class="opcionescierre">English        </label></td>
+                            <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio29" runat="server"/><label class="opcionescierre">Español        </label></td>                           
+                        </tr>                        
+                    </table>                                                                                                                                                                                                                   
+                <br />
+                        <asp:Button class="botonsubmit" value="PAGADO" type="submit" runat="server" CssClass="botonsubmit" Text="NEXT" OnClick="Unnamed1_Click" />
+                    
+                </div>
+                <div class="metodoTRES">
+                    <p><label class="titulocierre">Select Language</label></p> 
+                    
+                    <table >                        
+                        <tr>
+                            <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio25" runat="server"/><label class="opcionescierre">English        </label></td>
+                            <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio26" runat="server"/><label class="opcionescierre">Español        </label></td>                           
+                            <td><input type="radio"  class="efectivo" name="Tipopag" id="Radio27" runat="server" /><label class="opcionescierre">Français       </label></td>
+                        </tr>                        
+                    </table>                                                                                                                                                                                                                   
+                <br />
+                        <asp:Button class="botonsubmit" value="PAGADO" type="submit" runat="server" CssClass="botonsubmit" Text="NEXT" OnClick="Unnamed1_Click" />
                     
                 </div>
             </center>

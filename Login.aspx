@@ -27,15 +27,15 @@
             <br />
             <br />
             <br />
-            <p><h2>Iniciar sesión</h2></p>
+            <p><h2>LOGIN</h2></p>
             <div class="fila col10L">
-                <input class="formulario" placeholder="Correo" id="Correo" type="email" required runat="server"/>            
+                <input class="formulario" placeholder="Email" id="Correo" type="email" required runat="server"/>            
             </div>                       
             <div class="fila col10L">
-                <input class="formulario" placeholder="Contraseña" id="Contrasena" type="password" required runat="server"/>            
+                <input class="formulario" placeholder="Password" id="Contrasena" type="password" required runat="server"/>            
             </div>            
-            <p><a class="enlaces" href="Registro.aspx">¿No tienes una cuenta? Registrate aquí</a></p>
-            <p><a class="enlaces" href="Contrasena.aspx">Cambiar Contraseña</a></p>
+            <p><a class="enlaces" href="Registro.aspx">Don't you have an account? sign up here</a></p>
+            <p><a class="enlaces" href="Contrasena.aspx">Change Password</a></p>
             <div class="fila col10L">
                 <asp:Button class="botonsubmit" value="REGISTRARME" type="submit" runat="server" CssClass="botonsubmit" Text="LOGIN" OnClick="Unnamed1_Click" />            
             </div>
