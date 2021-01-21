@@ -27,7 +27,7 @@
             <br />
             <br />
             <br />
-            <center><p><h2>System's Gallery</h2></p></center>
+            <center><p><h2>Search Products by Name or Code</h2></p></center>
             <div class="fila col10L">                
                <center> <p class="nombrecierre"><h4 class="nombrecierre">Dear: <asp:Label class="nombrecierre" runat="server" ID="clientefactura"></asp:Label></h4></p></center>
                 <div class="fila col10L">

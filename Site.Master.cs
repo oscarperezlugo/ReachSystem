@@ -11,7 +11,7 @@ namespace ReachSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.Cookies["nombreC"] != null)
+            if (Request.Cookies["nombreC"] != null)
             {
                 Label1.Text = Request.Cookies["nombreC"].Value;
             }
@@ -19,7 +19,7 @@ namespace ReachSystem
             {
                 Response.Redirect("Login.aspx");
             }
-            
+
         }
         public void CierreClick(object sender, EventArgs e)
         {

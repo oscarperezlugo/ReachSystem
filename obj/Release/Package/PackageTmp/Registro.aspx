@@ -153,7 +153,7 @@
                 <input class="formulario" placeholder="Repeat Password" id="Repetir" type="password" required runat="server"/>  
                 <center><div class="g-recaptcha" data-sitekey="6LefeNwZAAAAAMIRMWRYV7Ir7gJbOQ1ZyaHpJc47"></div></center>
             </div>           
-            <p><input type="checkbox" required> I Accept the Terms and Conditions <a class="enlaces" href="https://www.tarrago.com/privacy-policy/">Terms and Conditions</a></p>
+            <p><input type="checkbox" required> I agree to the Terms of Service & <a class="enlaces" href="https://www.tarrago.com/privacy-policy/" target="_blank">Privacy Policy</a></p>
             <p><a class="enlaces" href="Login.aspx">Do you already have an account? Login from Here</a></p>
             <div class="fila col10L">
                 <asp:Button class="botonsubmit" value="REGISTRARME" type="submit"  runat="server" CssClass="botonsubmit"  OnClick="Unnamed1_Click"  Text="Sign up"/>            

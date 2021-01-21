@@ -622,7 +622,7 @@ namespace ReachSystem
             }
             for (int i = 0; i < Lineas.Count; i++)
             {
-                using (SqlConnection openCon = new SqlConnection("workstation id=tarragoReach.mssql.somee.com;packet size=4096;user id=tarrago_SQLLogin_1;pwd=n84vsf5e47;data source=tarragoReach.mssql.somee.com;persist security info=False;initial catalog=tarragoReach"))
+                using (SqlConnection openCon = new SqlConnection("workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands"))
                 {
                     string saveStaff = "INSERT into Productos (Nombre, Clase, Idioma, Archivo, Codigo) VALUES (@Nombre, @Clase, @Idioma, @Archivo, @Codigo)";
 

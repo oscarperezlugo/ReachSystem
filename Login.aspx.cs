@@ -18,7 +18,7 @@ namespace ReachSystem
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            string connectionString = "workstation id=tarragoReach.mssql.somee.com;packet size=4096;user id=tarrago_SQLLogin_1;pwd=n84vsf5e47;data source=tarragoReach.mssql.somee.com;persist security info=False;initial catalog=tarragoReach";
+            string connectionString = "workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands";
             string query = "SELECT Nombre, Row, Perfil FROM Usuario WHERE Email=@Email AND Pass=@Pass;";
 
 

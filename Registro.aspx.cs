@@ -6,6 +6,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mail;
+using System.Net;
 
 namespace ReachSystem
 {
@@ -17,11 +19,33 @@ namespace ReachSystem
         }
 
         protected void Unnamed1_Click(object sender, EventArgs e)
-        {
+        {            
+
             if (Contraseña.Value.ToString() == Repetir.Value.ToString())
             {
+                string body = "<body>" +
+                    "<h1>WELCOME TO OUR SYSTEM</h1>" +
+                    "</body>";
+                SmtpClient smtp = new SmtpClient();
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
+                smtp.Host = "smtp.gmail.com";
+                smtp.Port = 587;
+                smtp.Credentials = new NetworkCredential("vdevalenciano@gmail.com", "vdv123vdv");                         
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                
+                
 
-                using (SqlConnection openCon = new SqlConnection("workstation id=tarragoReach.mssql.somee.com;packet size=4096;user id=tarrago_SQLLogin_1;pwd=n84vsf5e47;data source=tarragoReach.mssql.somee.com;persist security info=False;initial catalog=tarragoReach"))
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("proyectoojcpl@gmail.com", "Tarrago Brands International");
+                mail.To.Add(new MailAddress(""+Correo.Value.ToString()+""));
+                mail.Subject = "Welcome to Tarrago Brands International";
+                mail.IsBodyHtml = true;
+                mail.Body = body;
+
+                smtp.Send(mail);
+
+                using (SqlConnection openCon = new SqlConnection("workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands"))
                 {
                     string saveStaff = "INSERT into Usuario (Nombre, Email, FechaCreacion, Empresa, Telefono, Direccion, Perfil, Idioma, Pais, IdiomaOrig, EmpresaOrig, Pass, Status) VALUES (@Nombre, @Email, @FechaCreacion, @Empresa, @Telefono, @Direccion, @Perfil, @Idioma, @Pais, @IdiomaOrig, @EmpresaOrig, @Pass, @Status)";                  
                     
@@ -46,6 +70,7 @@ namespace ReachSystem
                             openCon.Open();
                             querySaveStaff.ExecuteNonQuery();
                             openCon.Close();
+                            
                             Response.Write("<script>alert('USUARIO REGISTRADO PENDIENTE DE APROBACION')</script>");
                         }
                         catch (SqlException ex)
