@@ -25,17 +25,17 @@ namespace ReachSystem
                     "<h1>WELCOME TO OUR SYSTEM</h1>" +
                     "</body>";
                 SmtpClient smtp = new SmtpClient();
-                smtp.EnableSsl = true;
+                smtp.EnableSsl = false;
                 smtp.UseDefaultCredentials = false;
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.Credentials = new NetworkCredential("vdevalenciano@gmail.com", "vdv123vdv");
+                smtp.Host = "smtp.tarragobrands.somee.com";
+                smtp.Port = 26;
+                smtp.Credentials = new NetworkCredential("noreply@tarragobrands.somee.com", "Otto.123");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
 
 
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("proyectoojcpl@gmail.com", "Tarrago Brands International");
+                mail.From = new MailAddress("noreply@tarragobrands.somee.com", "Tarrago Brands International");
                 mail.To.Add(new MailAddress("" + Correo.Value.ToString() + ""));
                 mail.Subject = "Welcome to Tarrago Brands International";
                 mail.IsBodyHtml = true;

@@ -151,7 +151,7 @@
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Repeat Password" id="Repetir" type="password" required runat="server"/>  
-                <center><div class="g-recaptcha" data-sitekey="6LefeNwZAAAAAMIRMWRYV7Ir7gJbOQ1ZyaHpJc47"></div></center>
+                <%--<center><div class="g-recaptcha" data-sitekey="6LefeNwZAAAAAMIRMWRYV7Ir7gJbOQ1ZyaHpJc47"></div></center>--%>
             </div>           
             <p><input type="checkbox" required> I agree to the Terms of Service & <a class="enlaces" href="https://www.tarrago.com/privacy-policy/" target="_blank">Privacy Policy</a></p>
             <p><a class="enlaces" href="Login.aspx">Do you already have an account? Login from Here</a></p>
