@@ -21,7 +21,7 @@ namespace ReachSystem
                 Contraseña.Attributes.Add("style", "display:none");
                 BotonUsu.Text = "ACTUALIZAR USUARIO";
                 string connectionString = "workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands";
-                string query = "SELECT Nombre, Email, Perfil, Empresa, Pais, Pass FROM Usuario WHERE Email=@Email";
+                string query = "SELECT Nombre, Email, Perfil, Empresa, Pais FROM Usuario WHERE Email=@Email";
 
 
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -43,8 +43,7 @@ namespace ReachSystem
                             string correo= dr.GetFieldValue<string>(1);
                             string Perfil = dr.GetFieldValue<string>(2);
                             string empresa = dr.GetFieldValue<string>(3);
-                            string pais = dr.GetFieldValue<string>(4);
-                            string pass = dr.GetFieldValue<string>(5);
+                            string pais = dr.GetFieldValue<string>(4);                            
                             string apellido = prenombre.Split(' ')[1];
                             string nombre = prenombre.Split(' ')[0];
                             Nombre.Value = nombre;
@@ -52,8 +51,7 @@ namespace ReachSystem
                             Apellido.Value = empresa;
                             Correo.Value = correo;
                             DropDownList4.SelectedValue = Perfil;
-                            DropDownList2.SelectedValue = pais;
-                            Contraseña.Value = pass;
+                            DropDownList2.SelectedValue = pais;                            
                             Response.Cookies["paramuSERC"].Expires = DateTime.Now.AddDays(-1);
                             HttpCookie buscarS = new HttpCookie("botonGuia");
                             buscarS.Value = "1";
