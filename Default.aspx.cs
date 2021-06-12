@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,27 +26,62 @@ namespace ReachSystem
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int i = GridView1.SelectedIndex;
-            string nombre = GridView1.Rows[i].Cells[1].Text;
-            string clase = GridView1.Rows[i].Cells[2].Text;
-            string codigo = GridView1.Rows[i].Cells[3].Text;
+            if (GridView1.Rows.Count > 0)
+            {
+                int i = GridView1.SelectedIndex;
+                string codigo = GridView1.Rows[i].Cells[3].Text;
+                string clase = GridView1.Rows[i].Cells[2].Text;
+                using (SqlConnection openCon = new SqlConnection("workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands"))
+                {
+                    string saveStaff = "Delete from Productos where Clase = @Clase AND Codigo=@Codigo";
 
-            HttpCookie nombreS = new HttpCookie("nombreProdC");
-            nombreS.Value = nombre;
-            nombreS.Expires = DateTime.Now.AddDays(30);
-            Response.Cookies.Add(nombreS);
+                    using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
+                    {
+                        querySaveStaff.Connection = openCon;
+                        querySaveStaff.Parameters.Add("@Clase", SqlDbType.VarChar).Value = clase;
+                        querySaveStaff.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = codigo;
+                        try
+                        {
+                            openCon.Open();
+                            querySaveStaff.ExecuteNonQuery();
+                            openCon.Close();
+                            Response.Write("<script>alert('PRODUCTO ELIMINADO')</script>");
+                        }
+                        catch (SqlException ex)
+                        {
+                            Response.Write("Error" + ex);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                int i = GridView2.SelectedIndex;
+                string codigo = GridView2.Rows[i].Cells[3].Text;
+                string clase = GridView2.Rows[i].Cells[2].Text;
+                using (SqlConnection openCon = new SqlConnection("workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands"))
+                {
+                    string saveStaff = "Delete from Productos where Clase = @Clase AND Codigo=@Codigo";
 
-            HttpCookie claseS = new HttpCookie("clasProdC");
-            claseS.Value = clase;
-            claseS.Expires = DateTime.Now.AddDays(30);
-            Response.Cookies.Add(claseS);
-
-            HttpCookie codigoS = new HttpCookie("codProdC");
-            codigoS.Value = codigo;
-            codigoS.Expires = DateTime.Now.AddDays(30);
-            Response.Cookies.Add(codigoS);
-
-            Response.Redirect("CreacionProductoDos.aspx");
+                    using (SqlCommand querySaveStaff = new SqlCommand(saveStaff))
+                    {
+                        querySaveStaff.Connection = openCon;
+                        querySaveStaff.Parameters.Add("@Clase", SqlDbType.VarChar).Value = clase;
+                        querySaveStaff.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = codigo;
+                        try
+                        {
+                            openCon.Open();
+                            querySaveStaff.ExecuteNonQuery();
+                            openCon.Close();
+                            Response.Write("<script>alert('PRODUCTO ELIMINADO')</script>");
+                        }
+                        catch (SqlException ex)
+                        {
+                            Response.Write("Error" + ex);
+                        }
+                    }
+                }
+            }
         }
         protected void Unnamed1_Click(object sender, EventArgs e)
         {

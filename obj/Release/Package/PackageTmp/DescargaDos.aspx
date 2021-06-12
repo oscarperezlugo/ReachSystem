@@ -33,21 +33,22 @@
         <div class="card-header">
                 <div class="form-row">
                     <div class="col10L">
-                        <asp:Label ID="Label6" runat="server" Text="Products" Style="font-weight: bold; font-size: 18px;"></asp:Label>
+                        <asp:Label ID="Label6" runat="server" Text="PRODUCT SEARCH RESULT" Style="font-weight: bold; font-size: 18px;"></asp:Label>
                     </div>
                 </div>
             </div>
         <div class="card-body">
                 <div class="form-row">
+                    <asp:Label ID="Label1" runat="server" Style="font-weight: bold; font-size: 18px;"></asp:Label>
                     <%--<div class="col10L">--%>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True"  AutoGenerateColumns="False" GridLines="None"  DataSourceID="SqlDataSource1" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black"  CssClass="mGrid table table-responsive table-striped" PagerStyle-CssClass="pgr" margin-left="2%" AlternatingRowStyle-CssClass="alt" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
 <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
                 <Columns>                    
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                    <asp:BoundField DataField="Nombre" HeaderText="NAME" SortExpression="Nombre" />
                     <%--<asp:BoundField DataField="Clase" HeaderText="Clase" SortExpression="Clase" />
                     <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Clase" />
                     <asp:BoundField DataField="Idioma" HeaderText="Idioma" SortExpression="Idioma" />--%>
-                    <asp:CommandField ShowSelectButton="True" SelectText="DESCARGAR" ButtonType="Button" />
+                    <asp:CommandField ShowSelectButton="True" SelectText="DOWNLOAD" ButtonType="Button" />
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                             <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />
@@ -70,6 +71,9 @@
         </div>
         </div>
         </div>
+        <div class="fila col10L">
+               <center><asp:Button class="botonsubmit" value="REGISTRARME" type="submit" runat="server" CssClass="botonsubmit" text="NEW SEARCH" OnClick="Unnamed1_Click" /></center>                               
+            </div>
         <%--</div>--%>
     </form>
 </body>

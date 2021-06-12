@@ -113,10 +113,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\columnas.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Confirmacion.aspx" />
     <Content Include="CreacionProductoDos.aspx" />
     <Content Include="CreacionProductoUno.aspx" />
     <Content Include="CreacionUsuario.aspx" />
     <Content Include="DescargaDos.aspx" />
+    <Content Include="DescargaInt.aspx" />
+    <Content Include="DescargaIntDos.aspx" />
     <Content Include="ListaUsuariosPen.aspx" />
     <Content Include="ListaUsuarios.aspx" />
     <Content Include="Default.aspx" />
@@ -186,6 +189,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Confirmacion.aspx.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmacion.aspx.designer.cs">
+      <DependentUpon>Confirmacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreacionProductoDos.aspx.cs">
       <DependentUpon>CreacionProductoDos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +224,20 @@
     </Compile>
     <Compile Include="DescargaDos.aspx.designer.cs">
       <DependentUpon>DescargaDos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescargaInt.aspx.cs">
+      <DependentUpon>DescargaInt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DescargaInt.aspx.designer.cs">
+      <DependentUpon>DescargaInt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescargaIntDos.aspx.cs">
+      <DependentUpon>DescargaIntDos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DescargaIntDos.aspx.designer.cs">
+      <DependentUpon>DescargaIntDos.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaUsuariosPen.aspx.cs">
       <DependentUpon>ListaUsuariosPen.aspx</DependentUpon>

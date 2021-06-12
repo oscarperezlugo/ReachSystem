@@ -22,7 +22,7 @@
             <asp:BoundField DataField="Clase" HeaderText="Clase" SortExpression="Clase" />
             <asp:BoundField DataField="Codigo" HeaderText="Codigo" SortExpression="Clase" />
             <asp:BoundField DataField="Idioma" HeaderText="Idioma" SortExpression="Idioma" />
-           <%-- <asp:CommandField ShowSelectButton="True" SelectText="ACTUALIZAR" />--%>
+            <asp:CommandField ShowSelectButton="True" SelectText="ELIMINAR" ButtonType="Button" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                             <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />

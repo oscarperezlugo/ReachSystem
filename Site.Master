@@ -53,7 +53,7 @@
                     <li><a href="Default.aspx">LISTA</a></li>
                     <li><a href="CreacionProductoUno.aspx">CREACION</a></li>
                     <%--<li><a href="Default.aspx">ACTUALIZACION</a></li>--%>
-                    <li><a href="Descarga.aspx">DESCARGA</a></li>
+                    <li><a href="DescargaInt.aspx">DESCARGA</a></li>
                 </ul>
             </div>
             <div class="desplegable">

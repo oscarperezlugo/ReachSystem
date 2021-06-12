@@ -130,7 +130,11 @@
                 <input class="formulario" placeholder="Contraseña" id="Contraseña" type="password"  runat="server"/>            
             </div>                                  
             <div class="fila col10L">
-                <asp:Button class="botonsubmit" value="REGISTRARME" type="submit"  runat="server" CssClass="botonsubmit"  OnClick="Unnamed1_Click"  Text="CREAR USUARIO"/>            
+                <asp:Button class="botonsubmit" value="REGISTRARME" type="submit"  runat="server" CssClass="botonsubmit"  OnClick="Unnamed1_Click"  ID="BotonUsu"/>            
+            </div>
+        <div class="fila col10L">
+            <br />
+                <asp:Button class="botonsubmit" value="REGISTRARME" type="submit"  runat="server" CssClass="botonsubmit"  OnClick="Unnamed2_Click"  ID="Button1" Text="ELIMINAR USUARIO"/>            
             </div>
         </div>
             <br />

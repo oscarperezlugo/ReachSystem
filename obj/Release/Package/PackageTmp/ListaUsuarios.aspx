@@ -19,12 +19,13 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1"  GridLines="None" AllowPaging="True" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black"  CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AlternatingRowStyle-CssClass="alt" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
 <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
 
-        <Columns>                                    
+        <Columns>
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="FechaCreacion" HeaderText="FechaCreacion" SortExpression="FechaCreacion" />
             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-            <asp:BoundField DataField="Perfil" HeaderText="Perfil" SortExpression="Perfil" />
+            <%--<asp:BoundField DataField="Perfil" HeaderText="Perfil" SortExpression="Perfil" />--%>
             <asp:BoundField DataField="Empresa" HeaderText="Empresa" SortExpression="Empresa" />
+            <asp:CommandField SelectText="ACTUALIZAR" ShowSelectButton="True" ButtonType="Button"></asp:CommandField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                             <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />
@@ -46,12 +47,13 @@
                     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2"  GridLines="None" AllowPaging="True" BackColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="20" ForeColor="Black"  CssClass="mGrid" PagerStyle-CssClass="pgr" margin-left="2%" AlternatingRowStyle-CssClass="alt" AllowSorting="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
 <AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
 
-        <Columns>                                    
+        <Columns>            
             <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="FechaCreacion" HeaderText="FechaCreacion" SortExpression="FechaCreacion" />
             <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-            <asp:BoundField DataField="Perfil" HeaderText="Perfil" SortExpression="Perfil" />
+           <%-- <asp:BoundField DataField="Perfil" HeaderText="Perfil" SortExpression="Perfil" />--%>
             <asp:BoundField DataField="Empresa" HeaderText="Empresa" SortExpression="Empresa" />
+            <asp:CommandField SelectText="ACTUALIZAR" ShowSelectButton="True" ButtonType="Button"></asp:CommandField>
         </Columns>
         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                             <HeaderStyle BackColor="white" Font-Bold="True" ForeColor="black" />

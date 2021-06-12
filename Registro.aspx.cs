@@ -23,8 +23,13 @@ namespace ReachSystem
 
             if (Contraseña.Value.ToString() == Repetir.Value.ToString())
             {
-                string body = "<body>" +
-                    "<h1>WELCOME TO OUR SYSTEM</h1>" +
+                string body = "<body>" +                    
+                    "<h4>Dear: "+Nombre.Value+"</h4>" +
+                    "<h4>You have been approved as a user of the Tarrago Reach System.</h4>" +
+                    "<h4>Remember that you can access with www.reach.tarrago.com</h4>" +
+                    "<h4>Kind regards,</h4>" +
+                    "<h4>Tarrago Brands International.</h4>" +
+                    "<img  src='https://www.tarrago.com/wp-content/uploads/2019/07/logo-tarrago-web.png' />" +
                     "</body>";
                 SmtpClient smtp = new SmtpClient();
                 smtp.EnableSsl = false;
@@ -39,7 +44,7 @@ namespace ReachSystem
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("noreply@tarragobrands.somee.com", "Tarrago Brands International");
                 mail.To.Add(new MailAddress(""+Correo.Value.ToString()+""));
-                mail.Subject = "Welcome to Tarrago Brands International";
+                mail.Subject = "Your Reach System Registration has been approved";
                 mail.IsBodyHtml = true;
                 mail.Body = body;
 
@@ -71,7 +76,7 @@ namespace ReachSystem
                             querySaveStaff.ExecuteNonQuery();
                             openCon.Close();
                             
-                            Response.Write("<script>alert('USUARIO REGISTRADO')</script>");
+                            Response.Write("<script>alert('ACCOUNT CREATED')</script>");
                         }
                         catch (SqlException ex)
                         {
@@ -83,7 +88,7 @@ namespace ReachSystem
             }
             else
             {
-                Response.Write("<script>alert('LAS CONTRASEÑAS NO COINCIDEN')</script>");
+                Response.Write("<script>alert('THE PASSWORDS DOES NOT MATCH')</script>");
             }
 
         }

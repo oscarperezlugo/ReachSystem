@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace ReachSystem
 {
-    public partial class Descarga : System.Web.UI.Page
+    public partial class DescargaInt : System.Web.UI.Page
     {
-        string IDIOMA ="";
+        string IDIOMA = "";
         string CLASE = "";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,15 +19,12 @@ namespace ReachSystem
             }
             else
             {
-                clientefactura.Text = "GUEST"; 
+                clientefactura.Text = "GUEST";
             }
-            
-            
         }
-
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if(check.Checked == true)
+            if (check.Checked == true)
             {
                 CLASE = "CLP";
             }
@@ -287,10 +282,8 @@ namespace ReachSystem
                 paramtresS.Value = Correo.Value;
                 paramtresS.Expires = DateTime.Now.AddDays(30);
                 Response.Cookies.Add(paramtresS);
-                Response.Redirect("DescargaDos.aspx");
+                Response.Redirect("DescargaIntDos.aspx");
             }
         }
-
     }
-    
 }

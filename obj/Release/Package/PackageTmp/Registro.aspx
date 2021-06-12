@@ -28,7 +28,7 @@
         <div class="baseform">
             <br />
             <br />
-            <p><h2>Sign Up</h2></p>
+            <p><h2>REGISTER FOR AN ACCOUNT</h2></p>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Name (John)" id="Nombre" type="text" required runat="server"/>            
             </div>
@@ -147,7 +147,7 @@
                 <input class="formulario" placeholder="Empresa De Origen(Tarrago Brands)" id="Text1" type="text" required runat="server"/>            
             </div>--%>
             <div class="fila col10L">
-                <input class="formulario" placeholder="Password" id="Contraseña" type="password" required runat="server"/>            
+                <input class="formulario" placeholder="Password" id="Contraseña" type="password"  runat="server" required/>            
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Repeat Password" id="Repetir" type="password" required runat="server"/>  

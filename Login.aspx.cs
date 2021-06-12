@@ -15,7 +15,10 @@ namespace ReachSystem
         {
 
         }
-
+        protected void Unnamed2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("https://www.tarrago.com/");
+        }
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
             string connectionString = "workstation id=tarragobrands.mssql.somee.com;packet size=4096;user id=tarragobrands_SQLLogin_1;pwd=mjmdlqn93g;data source=tarragobrands.mssql.somee.com;persist security info=False;initial catalog=tarragobrands";

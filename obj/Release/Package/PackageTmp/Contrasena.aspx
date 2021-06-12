@@ -28,19 +28,19 @@
             <br />
             <br />
             <br />
-            <p><h2>Recover password</h2></p>            
+            <p><h2>FORGOTTEN PASSWORD</h2></p>            
             <div class="fila col10L">
                 <input class="formulario" placeholder="Email" type="email"  required id="text1" runat="server"/>            
             </div>                        
-            <div class="fila col10L">
+            <%--<div class="fila col10L">
                 <input class="formulario" placeholder="New Password" type="password" required id="text2" runat="server"/>            
             </div>
             <div class="fila col10L">
                 <input class="formulario" placeholder="Repeat new Password" type="password" required id="text3" runat="server"/>            
-            </div>            
+            </div>   --%>         
             <p><a class="enlaces" href="Login.aspx">Back to Login</a></p>
             <div class="fila col10L">
-                <asp:Button runat="server" class="botonsubmit" value="CAMBIAR CONTRASEÑA" text="RECOVER PASSWORD" type="submit" OnClick="Unnamed1_Click1" />            
+                <asp:Button runat="server" class="botonsubmit" value="CAMBIAR CONTRASEÑA" text="REQUEST" type="submit" OnClick="Unnamed1_Click1" />            
             </div>
         </div>        
     </form>

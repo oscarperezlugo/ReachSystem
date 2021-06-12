@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ReachSystem
 {
-    public partial class DescargaDos : System.Web.UI.Page
+    public partial class DescargaIntDos : System.Web.UI.Page
     {
         string CLASE;
         string IDIOMA;
         string NOMBRE;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             IDIOMA = Request.Cookies["paramunoC"].Value;
@@ -58,26 +56,26 @@ namespace ReachSystem
                             if (dr.Read())
                             {
                                 string archivo = dr.GetFieldValue<string>(0);
-                                var transporte = Convert.FromBase64String(archivo);                                
+                                var transporte = Convert.FromBase64String(archivo);
                                 Response.Clear();
                                 Response.ClearHeaders();
                                 Response.ContentType = "application/pdf";
-                                Response.AddHeader("content-disposition", "attachment; filename=" + ""+IDIOMA+" "+CLASE+" "+GridView1.Rows[0].Cells[0].Text+".pdf");
+                                Response.AddHeader("content-disposition", "attachment; filename=" + "" + IDIOMA + " " + CLASE + " " + GridView1.Rows[0].Cells[0].Text + ".pdf");
                                 Response.BufferOutput = true; ;
-                                Response.OutputStream.Write(transporte, 0, transporte.Length);                                
+                                Response.OutputStream.Write(transporte, 0, transporte.Length);
                                 Response.End();
-                                
+
                             }
                             else
-                            {                                
+                            {
 
                             }
 
                             dr.Close();
                         }
                         openCon.Close();
-                        
-                        
+
+
                     }
                     catch (SqlException ex)
                     {
@@ -85,10 +83,7 @@ namespace ReachSystem
                     }
                 }
             }
-            
+
         }
-        
-        
     }
-    
 }

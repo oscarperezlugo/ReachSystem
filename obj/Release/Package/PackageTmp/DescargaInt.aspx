@@ -1,29 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Descarga.aspx.cs" Inherits="ReachSystem.Descarga" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="Oscar Perez Lugo" content="Developer"/>
-        <meta name="description"  content="Tarrago Brands"/>
-        <meta name="keywords"  content="QUIMICOS"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>        
-        <title>Tarrago Reach System</title>
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link href="Content/columnas.css" rel="stylesheet" />
-        <link href="Content/Site.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-</head>
-<body>
-    <form id="form1" runat="server">
-         <nav class="nave fila col10L">
-            <div class="col2L">
-                <img id="logo" src="https://www.tarrago.com/wp-content/uploads/2019/07/logo-tarrago-web.png"/>
-            </div>                       
-        </nav>
-        <div class="subnave"/>
-        <div >
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DescargaInt.aspx.cs" Inherits="ReachSystem.DescargaInt" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div >
             <br />
             <br />
             <br />
@@ -119,7 +96,5 @@
                     
                 </div>
             </center>
-          </div>   
-    </form>
-</body>
-</html>
+          </div>
+</asp:Content>

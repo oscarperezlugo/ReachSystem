@@ -27,19 +27,19 @@
             <br />
             <br />
             <br />
-            <center><p><h2>Search Products by Name or Code</h2></p></center>
+            <center><p><h2>SAFETY DATA SHEET SEARCH</h2></p></center>
             <div class="fila col10L">                
-               <center> <p class="nombrecierre"><h4 class="nombrecierre">Dear: <asp:Label class="nombrecierre" runat="server" ID="clientefactura"></asp:Label></h4></p></center>
+               <center> <p class="nombrecierre"><h4 class="nombrecierre">Dear: <asp:Label class="nombrecierre" runat="server" ID="clientefactura"></asp:Label> to search for Safety Data Sheets it is necessary to place the name of the product or code, select the type of legislation and finally the required language.</h4></p></center>
                 <div class="fila col10L">
                 <center><input class="formulario" placeholder="Product / Code" id="Correo" type="text" required runat="server"/></center>            
             </div>   
-               <center> <p><label class="titulocierre">Select your product class</label></p></center>
+               <center> <p><label class="titulocierre">Select the Labeling Regulations.</label></p></center>
             </div>
-            <center><input type="radio"  class="pickup" name="TipoVenta"  id="check" runat="server"/><label class="opcionescierre" >CLP </label><input type="radio"  class="pickupDOS" name="TipoVenta"  runat="server" id="pickup"/><label class="opcionescierre">GLP</label><input type="radio"  class="pickupTRES" name="TipoVenta"  runat="server" id="Radio1"/><label class="opcionescierre">CCR</label>
+            <center><input type="radio"  class="pickup" name="TipoVenta"  id="check" runat="server"/><label class="opcionescierre" >CLP </label><input type="radio"  class="pickupDOS" name="TipoVenta"  runat="server" id="pickup"/><label class="opcionescierre">CCPS</label><input type="radio"  class="pickupTRES" name="TipoVenta"  runat="server" id="Radio1"/><label class="opcionescierre">CCCR</label>
            
                 <div class="metodo">
                     <p><label class="titulocierre">Select Language</label></p> 
-                    
+                    <p><label class="titulocierre">European Labeling Regulations.</label></p>
                     <table >
                         <tr>
                             <td><input type="radio"  class="efectivo" name="Tipopag"  id="pagomivil1" runat="server"/><label class="opcionescierre" >Bulgarian      </label></td>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="metodoDOS">
                     <p><label class="titulocierre">Select Language</label></p> 
-                    
+                    <p><label class="titulocierre">US Labeling Regulations.</label></p>
                     <table >                        
                         <tr>
                             <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio28" runat="server"/><label class="opcionescierre">English        </label></td>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="metodoTRES">
                     <p><label class="titulocierre">Select Language</label></p> 
-                    
+                    <p><label class="titulocierre">Canadian Labeling Regulations. </label></p>
                     <table >                        
                         <tr>
                             <td><input type="radio"  class="efectivo" name="Tipopag"  id="Radio25" runat="server"/><label class="opcionescierre">English        </label></td>
