@@ -105,6 +105,7 @@ namespace ReachSystem
                             openCon.Open();
                             querySaveStaff.ExecuteNonQuery();
                             openCon.Close();
+                            Response.Cookies["botonGuia"].Expires = DateTime.Now.AddDays(-1);
                             Response.Write("<script>alert('USUARIO ACTUALIZADO')</script>");
                         }
                         catch (SqlException ex)

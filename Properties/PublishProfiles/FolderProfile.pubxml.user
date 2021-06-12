@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\oscar\OneDrive\Escritorio\WebTarrago</_PublishTargetUrl>
-    <History>True|2021-06-12T15:18:37.1185243Z;True|2021-06-12T11:16:02.7351629-04:00;True|2021-06-12T10:58:14.8781780-04:00;True|2021-06-12T10:55:50.4205164-04:00;True|2021-05-17T09:31:45.5782248-04:00;True|2021-05-17T09:28:47.7113595-04:00;True|2021-04-17T11:08:41.4648391-04:00;True|2021-04-17T11:02:48.4640192-04:00;True|2021-04-15T17:03:12.1404194-04:00;True|2021-04-15T17:00:29.5126818-04:00;True|2021-04-15T16:43:44.0722447-04:00;True|2021-03-11T10:46:19.8861919-04:00;True|2021-03-11T10:23:25.7604187-04:00;True|2021-03-11T10:21:07.0241625-04:00;True|2021-03-11T10:16:18.7659665-04:00;</History>
+    <History>True|2021-06-12T15:25:25.1343223Z;True|2021-06-12T11:20:59.5611096-04:00;True|2021-06-12T11:18:37.1185243-04:00;True|2021-06-12T11:16:02.7351629-04:00;True|2021-06-12T10:58:14.8781780-04:00;True|2021-06-12T10:55:50.4205164-04:00;True|2021-05-17T09:31:45.5782248-04:00;True|2021-05-17T09:28:47.7113595-04:00;True|2021-04-17T11:08:41.4648391-04:00;True|2021-04-17T11:02:48.4640192-04:00;True|2021-04-15T17:03:12.1404194-04:00;True|2021-04-15T17:00:29.5126818-04:00;True|2021-04-15T16:43:44.0722447-04:00;True|2021-03-11T10:46:19.8861919-04:00;True|2021-03-11T10:23:25.7604187-04:00;True|2021-03-11T10:21:07.0241625-04:00;True|2021-03-11T10:16:18.7659665-04:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="About.aspx">
@@ -51,10 +51,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/21/2019 19:06:16</publishTime>
     </File>
     <File Include="bin/ReachSystem.dll">
-      <publishTime>06/12/2021 11:18:36</publishTime>
+      <publishTime>06/12/2021 11:25:24</publishTime>
     </File>
     <File Include="bin/ReachSystem.pdb">
-      <publishTime>06/12/2021 11:18:36</publishTime>
+      <publishTime>06/12/2021 11:25:24</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>

@@ -149,3 +149,4 @@ F:\Repos\ReachSystem\obj\Release\ReachSystem.csproj.CoreCompileInputs.cache
 F:\Repos\ReachSystem\obj\Release\ReachSystem.csproj.CopyComplete
 F:\Repos\ReachSystem\obj\Release\ReachSystem.dll
 F:\Repos\ReachSystem\obj\Release\ReachSystem.pdb
+C:\Users\oscar\source\repos\ReachSystem\obj\Release\ReachSystem.csproj.AssemblyReference.cache
